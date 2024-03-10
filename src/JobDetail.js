@@ -37,7 +37,7 @@ const JobDetail = () => {
     return (
         <div className="container mt-5">
             <div className="row d-flex justify-content-center align-items-center">
-                <Link to="/" className="pt-5" ><i class=" fa-2x fa-solid fa-chevron-left"></i></Link>
+                <Link to="/" className="pt-5" ><i className=" fa-2x fa-solid fa-chevron-left"></i></Link>
                 {
                     loading ? <Loading /> :
                         <div className="col-lg-10">

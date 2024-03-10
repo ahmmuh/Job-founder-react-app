@@ -10,7 +10,7 @@ const Error = () => {
                 role="alert"
             >
                 <p className="mb-2">Fyll i alla fält för att kunna skicka in din ansökan</p>
-                <Link to={`/job/${id}`}  ><i class=" fa-2x fa-solid fa-chevron-left"></i></Link>
+                <Link to={`/job/${id}`}  ><i className=" fa-2x fa-solid fa-chevron-left"></i></Link>
             </div>
 
         </div>

@@ -24,23 +24,23 @@ const Apply = () => {
     }
 
     const handleSubmit = (e) => {
+
         e.preventDefault();
-        localStorage.setItem('applyId', JSON.stringify(applyId))
-        if (!e.target.value || e.target.value == '') {
+        if (user.firstname !== "" && user.lastname !== "" && user.email !== "" && user.phone && user.id !== "") {
+            localStorage.setItem('applyId', JSON.stringify(applyId))
+            localStorage.setItem("userInfo", JSON.stringify(user))
+            navigate("/confirmation")
+        }
+
+        else {
             setErr(err)
             navigate("/error")
-
-        }
-        else {
-            localStorage.setItem("userInfo", JSON.stringify(user))
-            setUser(user)
-            navigate("/confirmation")
         }
 
     }
     return (
         <div className='container' style={{ marginTop: "5rem" }}>
-            <Link to={`/jobs/job/${applyId}`}  ><i class=" fa-2x fa-solid fa-chevron-left"></i></Link>
+            <Link to={`/jobs/job/${applyId}`}  ><i className=" fa-2x fa-solid fa-chevron-left"></i></Link>
             <form>
                 <div className="mb-3">
                     <input
@@ -99,8 +99,8 @@ const Apply = () => {
                         type="text"
                         name="id"
                         id=""
-                        disabled
-                        value={applyId}
+                        onChange={handleChange}
+                        value={user.id}
 
                     />
                 </div>
