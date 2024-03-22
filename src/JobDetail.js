@@ -62,7 +62,7 @@ const JobDetail = () => {
                                     <p>Position: {selectedJob.jobType}</p>
                                     <p><i className="fa-solid fa-location-dot"></i>  {selectedJob.jobGeo}</p>
 
-                                    <Link to={`/job/${selectedJob.id}`} className="btn bg-color text-white ">Sök tjänsten</Link>
+                                    <Link to="/confirmation" className="btn bg-color text-white ">Sök tjänsten</Link>
                                 </li>
                             </ul>
 
@@ -70,7 +70,7 @@ const JobDetail = () => {
                 }
 
             </div>
-        </div>
+        </div >
     )
 }
 

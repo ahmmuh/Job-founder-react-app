@@ -90,7 +90,7 @@ const JobList = () => {
                                             </div>
 
 
-                                            <Link to={`/jobs/job/${job.id}`} className="btn bg-color text-white mt-2 ">Sök tjänsten</Link>
+                                            <Link to={`/jobs/job/${job.id}`} className="btn bg-color text-white mt-2 ">Visa mer</Link>
                                         </li>
                                     </div>
                                 ))
